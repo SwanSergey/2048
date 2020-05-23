@@ -1,0 +1,144 @@
+
+*{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -khtml-user-drag: none;
+    -ms-user-drag: none;
+    -user-drag: none;
+}
+#playfield{
+    display: inline-block;
+    position: relative;
+    top: calc((100% - 400px) / 2);
+    left: calc((100% - 400px) / 2);
+    width: 400px;
+    height: 400px;
+    background: #dddddd;
+    border-radius: 4px;
+}
+
+.thing{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background: transparent;
+    color: #FFFFF0;
+    border: #FFFFF0 solid 1px;
+    text-align: center;
+    font: 38px/96px Arial;
+    -webkit-transition:all 0.2s ease-out;
+    transition:all 0.2s ease-out;
+    z-index: 1;
+}
+
+.thing:hover{
+    box-shadow: 0 0 15px #FFFFF0;
+    cursor: pointer;
+    z-index: 2;
+}
+.thing.t2{
+    background: #B22222;
+}
+.thing.t2:after{
+    content: '2'
+}
+.thing.t4{
+    background: #FF4500;
+}
+.thing.t4:after{
+    content: '4'
+}
+.thing.t8{
+    background: #FFD700;
+}
+.thing.t8:after{
+    content: '8'
+}
+.thing.t16{
+    background: #00FF00;
+}
+.thing.t16:after{
+    content: '16'
+}
+.thing.t32{
+    background: #3CB371;
+}
+.thing.t32:after{
+    content: '32'
+}
+.thing.t64{
+    background: #008B8B;
+}
+.thing.t64:after{
+    content: '64'
+}
+.thing.t128{
+    background: #1E90FF;
+}
+.thing.t128:after{
+    content: '128'
+}
+.thing.t256{
+    background: #4B0082;
+}
+.thing.t256:after{
+    content: '256'
+}
+.thing.t512{
+    background: #EE82EE;
+}
+.thing.t512:after{
+    content: '512'
+}
+.thing.t1024{
+    background: Purple;
+}
+.thing.t1024:after{
+    content: '1024'
+}
+.thing.t2048{
+    background: #FF00FF;
+}
+.thing.t2048:after{
+    content: '2048'
+}
+.thing.t4096{
+    background: #0000;
+}
+.thing.t4096:after{
+    content: '4096'
+}
+.y0{
+    top:0px;
+}
+.y1{
+    top:100px;
+}
+.y2{
+    top:200px;
+}
+.y3{
+    top:300px;
+}
+.x0{
+    left:0px;
+}
+.x1{
+    left:100px;
+}
+.x2{
+    left:200px;
+}
+.x3{
+    left:300px;
+}
+
+    
