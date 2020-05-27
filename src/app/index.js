@@ -20,13 +20,23 @@ class Game{
             }
         );
 
-        $('#playfield').unbind('mousedown').mousedown((e)=>{
-                this.mouseDownHundler(e);
+        $('#playfield').unbind('mousedown').bind("mousedown",(e)=>{
+                this.downHundler(e);
             }
         );
 
-        $('#playfield').unbind('mouseup').mouseup((e)=>{
-                this.mouseUpHundler(e);
+        $('#playfield').unbind('mouseup').bind("mouseup",(e)=>{
+                this.upHundler(e);
+            }
+        );
+
+        $('#playfield').unbind('touchstart').bind("touchstart",(e)=>{
+                this.downHundler(e.changedTouches[0]);
+            }
+        );
+
+        $('#playfield').unbind('touchend').bind("touchend",(e)=>{
+                this.upHundler(e.changedTouches[0]);
             }
         );
 
@@ -85,13 +95,13 @@ class Game{
     }
 
 
-    mouseDownHundler(e){
-        this.startMouseCoordinates={y:e.clientY,x:e.clientX};
+    downHundler(e){
+        this.startMouseCoordinates={y:e.screenY,x:e.screenX};
         this.isMouseDown=true;
     }
 
-    mouseUpHundler(e){
-        this.endMouseCoordinates={y:e.clientY,x:e.clientX};
+    upHundler(e){
+        this.endMouseCoordinates={y:e.screenY,x:e.screenX};
 
         if(this.isMouseDown && this.isBlockedMove!=true) {
             let minDistance=50;
